@@ -27,7 +27,7 @@ import CoreGraphics
 @IBDesignable
 final public class YPDrawSignatureView: UIView {
     
-    weak var delegate: YPSignatureDelegate?
+    public weak var delegate: YPSignatureDelegate?
     
     // MARK: - Public properties
     @IBInspectable public var strokeWidth: CGFloat = 2.0 {
@@ -209,7 +209,7 @@ final public class YPDrawSignatureView: UIView {
 /// - optional didStart()
 /// - optional didFinish()
 @objc
-protocol YPSignatureDelegate: class {
+public protocol YPSignatureDelegate: class {
     func didStart()
     func didFinish()
     @available(*, unavailable, renamed: "didFinish()")
